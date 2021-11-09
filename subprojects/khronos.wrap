@@ -1,0 +1,3 @@
+[wrap-git]
+url = https://gitlab.freedesktop.org/majanes/khronos.git
+revision = main
