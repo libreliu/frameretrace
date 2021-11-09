@@ -1,0 +1,4 @@
+[wrap-git]
+url = https://gitlab.freedesktop.org/majanes/crc32c.git
+revision = main
+

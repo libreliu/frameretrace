@@ -10,3 +10,4 @@ mhook
 protobuf
 snappy-1.1.7
 brotli-1.0.7
+crc32c
