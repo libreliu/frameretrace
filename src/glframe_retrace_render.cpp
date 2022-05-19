@@ -90,9 +90,15 @@ is_clear(const trace::Call &call) {
 }
 
 bool
+is_gen_mipmap(const trace::Call &call) {
+    return strncmp("glGenerateMipmap", call.name(),
+                   strlen("glGenerateMipmap")) == 0;
+}
+
+bool
 RetraceRender::isRender(const trace::Call &call) {
   return ((call.flags & trace::CALL_FLAG_RENDER) || isCompute(call)
-          || is_clear(call));
+          || is_clear(call) || is_gen_mipmap(call));
 }
 
 bool
