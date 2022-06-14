@@ -349,6 +349,7 @@ class OnFrameRetrace {
   virtual void onMetrics(const MetricSeries &metricData,
                          ExperimentId experimentCount,
                          SelectionId selectionCount) = 0;
+  virtual void onLastMetric() = 0;
   virtual void onShaderCompile(RenderId renderId,
                                ExperimentId experimentCount,
                                bool status,

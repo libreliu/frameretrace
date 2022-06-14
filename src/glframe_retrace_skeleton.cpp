@@ -650,6 +650,9 @@ FrameRetraceSkeleton::onMetrics(const MetricSeries &metricData,
 }
 
 void
+FrameRetraceSkeleton::onLastMetric() { assert(false); }
+
+void
 FrameRetraceSkeleton::onApi(SelectionId selectionCount,
                             RenderId renderId,
                             const std::vector<std::string> &api_calls,

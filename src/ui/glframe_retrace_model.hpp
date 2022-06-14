@@ -198,6 +198,7 @@ class FrameRetraceModel : public QObject,
   void onMetrics(const MetricSeries &metricData,
                  ExperimentId experimentCount,
                  SelectionId selectionCount);
+  void onLastMetric() {}
   void onApi(SelectionId selectionCount,
              RenderId renderId,
              const std::vector<std::string> &api_callscallsmode,

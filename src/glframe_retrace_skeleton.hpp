@@ -85,6 +85,7 @@ class FrameRetraceSkeleton : public Thread,
   virtual void onMetrics(const MetricSeries &metricData,
                          ExperimentId experimentCount,
                          SelectionId selectionCount);
+  virtual void onLastMetric();
   virtual void onApi(SelectionId selectionCount,
                      RenderId renderid,
                      const std::vector<std::string> &api_calls,

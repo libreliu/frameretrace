@@ -140,6 +140,11 @@ QMetricsModel::onMetrics(const MetricSeries &metricData,
 }
 
 void
+QMetricsModel::onLastMetric() {
+  emit metricTableChanged();
+}
+
+void
 QMetricsModel::onSelect(SelectionId id, QList<int> selection) {
   if (!m_retrace)
     return;

@@ -115,6 +115,7 @@ class QMetricsModel : public QObject, OnFrameRetrace,
   void onMetrics(const MetricSeries &metricData,
                  ExperimentId experimentCount,
                  SelectionId selectionCount);
+  void onLastMetric();
   void onShaderCompile(RenderId renderId,
                        ExperimentId experimentCount,
                        bool status,

@@ -551,6 +551,7 @@ class RetraceMetricsRequest : public IRetraceRequest {
 
       m_callback->onMetrics(met, eid, SelectionId(0));
     }
+    m_callback->onLastMetric();
   }
 
  private:
@@ -622,6 +623,7 @@ class RetraceAllMetricsRequest : public IRetraceRequest {
 
       m_callback->onMetrics(met, eid, sid);
     }
+    m_callback->onLastMetric();
   }
 
  private:
