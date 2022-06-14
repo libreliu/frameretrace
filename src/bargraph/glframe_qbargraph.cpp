@@ -210,8 +210,8 @@ BarGraphView::subscribeRandom(QBarGraphRenderer *graph) {
   QList<BarMetrics> metrics;
   for (int i = 0; i < m_randomBars; ++i) {
     metrics.append(BarMetrics());
-    metrics.back().metric1 = qrand() % 100;
-    metrics.back().metric2 = qrand() % 100;
+    metrics.back().metric1 = QRandomGenerator::global()->generate() % 100;
+    metrics.back().metric2 = QRandomGenerator::global()->generate() % 100;
   }
   graph->onMetrics(metrics);
   return true;
