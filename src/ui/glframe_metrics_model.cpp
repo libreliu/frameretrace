@@ -112,7 +112,7 @@ QMetricsModel::init(IFrameRetrace *r,
 
 QQmlListProperty<QMetricValue>
 QMetricsModel::metrics() {
-  return QQmlListProperty<QMetricValue>(this, m_filtered_metric_list);
+  return QQmlListProperty<QMetricValue>(this, &m_filtered_metric_list);
 }
 
 void

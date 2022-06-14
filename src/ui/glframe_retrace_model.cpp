@@ -234,12 +234,12 @@ BAD_FRAME: {
 
 QQmlListProperty<QRenderBookmark>
 FrameRetraceModel::renders() {
-  return QQmlListProperty<QRenderBookmark>(this, m_renders_model);
+  return QQmlListProperty<QRenderBookmark>(this, &m_renders_model);
 }
 
 QQmlListProperty<QMetric>
 FrameRetraceModel::metricList() {
-  return QQmlListProperty<QMetric>(this, m_filtered_metric_list);
+  return QQmlListProperty<QMetric>(this, &m_filtered_metric_list);
 }
 
 
@@ -763,5 +763,5 @@ FrameRetraceModel::revertExperiments() {
 
 QQmlListProperty<glretrace::QOpenError>
 FrameRetraceModel::openError() {
-  return QQmlListProperty<QOpenError>(this, m_open_errors);
+  return QQmlListProperty<QOpenError>(this, &m_open_errors);
 }

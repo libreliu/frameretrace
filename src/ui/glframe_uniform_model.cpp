@@ -204,7 +204,7 @@ QUniformsModel::uniforms() {
   ScopedLock s(m_protect);
   if (m_index >= m_uniforms.size())
     return QQmlListProperty<QUniformValue>();
-  return QQmlListProperty<QUniformValue>(this, m_uniforms[m_index]);
+  return QQmlListProperty<QUniformValue>(this, &m_uniforms[m_index]);
 }
 
 void

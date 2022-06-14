@@ -119,7 +119,7 @@ QStateModel::~QStateModel() {
 
 QQmlListProperty<QStateValue> QStateModel::state() {
   ScopedLock s(m_protect);
-  return QQmlListProperty<glretrace::QStateValue>(this, m_states);
+  return QQmlListProperty<glretrace::QStateValue>(this, &m_states);
 }
 
 void
