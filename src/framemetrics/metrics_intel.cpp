@@ -204,7 +204,7 @@ IntelPerfMetricGroup::filter_metrics(std::vector<std::string> names) {
       names.pop_back();
     }
   }
-  for (const auto n : names)
+  for (const auto &n : names)
     GRLOGF(glretrace::ERR, "Could not enable metric: %s", n.c_str());
   assert(num_found);
 }

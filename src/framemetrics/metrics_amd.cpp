@@ -237,7 +237,7 @@ AMDPerfMetricGroup::AMDPerfMetricGroup(PerfMetricDescriptor metrics_desc)
         names.pop_back();
       }
     }
-    for (const auto n : names)
+    for (const auto &n : names)
       GRLOGF(glretrace::ERR, "Could not enable metric: %s", n.c_str());
 
     assert(!found_names.empty());

@@ -241,7 +241,7 @@ TEST_F(RetraceTest, AllMetricData) {
   EXPECT_EQ(cb.experiment_count.count(), 1);
   EXPECT_EQ(cb.selection_count.count(), 777);
   EXPECT_GT(cb.data.size(), 1);  // one callback for each metric
-  for (const MetricSeries s : cb.data) {
+  for (const MetricSeries &s : cb.data) {
     for (float d : s.data) {
       EXPECT_GT(d, -0.1);
     }

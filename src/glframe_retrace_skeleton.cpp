@@ -122,7 +122,7 @@ void
 writeResponse(Socket *s,
               const RetraceResponse &response,
               std::vector<unsigned char> *buf) {
-  const uint32_t write_size = response.ByteSize();
+  const uint32_t write_size = response.ByteSizeLong();
   if (!s->Write(write_size)) {
     return;
   }
@@ -666,7 +666,7 @@ FrameRetraceSkeleton::onApi(SelectionId selectionCount,
     api->add_apis(a);
   }
   assert(errors.size() == error_indices.size());
-  for (int i=0; i < errors.size(); ++i) {
+  for (uint i=0; i < errors.size(); ++i) {
     ApiTrace::ApiError *e = api->add_errors();
     e->set_index(error_indices[i]);
     e->set_err(errors[i]);
